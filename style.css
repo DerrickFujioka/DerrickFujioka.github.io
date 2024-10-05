@@ -1,0 +1,243 @@
+.text-red {
+    color: red;
+}
+
+.text-white {
+    color: white;
+}
+
+.divider {
+    border: none; /* Remove default border */
+    border-top: solid whitesmoke; /* Set the color and style of the line */
+    width: 400%; /* Make the line take the full width of the container */
+    margin: 1.5vh -5vh; /* Add some margin above and below the line */
+    margin-left: -10vw;
+}
+
+.blackdivider {
+    border: none; /* Remove default border */
+    border-top: solid black; /* Set the color and style of the line */
+    width: 100%; /* Make the line take the full width of the container */
+    margin: 1.5vh -5vh; /* Add some margin above and below the line */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 1vw;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#Resume {
+    justify-content: flex-start; /* Align the content to the top */
+    flex-direction: column;
+    display: flex;
+    background-color: white;
+    border-width: 2vw;
+    border-style: groove;
+    border-color: black;
+    width: 75vw;
+    text-align: center;
+    margin-bottom: -25vh;
+    height: justify;
+    padding-top: 2vw; /* Add some padding at the top for spacing */
+}
+
+#Name {
+    margin-top: 0; /* Remove any default margin */
+    padding-top: 1vw; /* Add some padding if needed */
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-size: 7vw;
+    font-weight: bold;
+}
+
+#SideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-contents;
+    width: 25vw;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+#Me {
+    width: 19vw;
+    height: 19vw;
+    clip-path: circle(50% at 50% 50%);
+}
+
+#LinkBox {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+#Links {
+    display: flex; /* Horizontally aligns the links */
+    align-items: center;
+    gap: 1vw; /* Adds space between the links and the dash */
+}
+
+a {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 2.25vw;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: pink;
+}
+
+a:active {
+    color: pink;
+}
+
+#dash {
+    color: white;
+    font-size: 1.75vh;
+    font-weight: bold;
+}
+
+#ContactsBox {
+    margin-top: -3.5vh;
+    text-align: center; /* Center the Contacts text */
+    margin-left: -3.5vh;
+}
+#Contacts{
+    font-size: 2vw;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: lightcyan;
+    
+}
+
+ul,ol {
+    margin-top: -3vh;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: whitesmoke;
+    align-items: center;
+}
+
+ul{
+    font-size: 1.25vw;
+}
+
+ol{
+    font-size: 0.8vw;
+}
+
+
+
+#Response{
+    margin-top: -10vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0;      /* Remove any unnecessary padding */
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.5vw;
+    color:black;
+}
+
+#References{    
+    margin-top: 10vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0;      /* Remove any unnecessary padding */
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.5vw;
+    color:black;}
+
+#Response:hover{
+    font-size: 2vw;
+}
+
+#Doi, #Doi2{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25vw;  
+    color:black;
+}
+
+#Doi1{    
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25vw;  
+    color:black;
+    margin-top: 10vh}
+
+#Doi1:hover{
+    font-size: 4vw;
+}
+
+#Doi2:hover{
+    color:white;
+}
+
+#Pratt, #Pratt2{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25vw;
+    color:black;
+}
+
+#Pratt1{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.25vw;
+    color:black;
+    margin-top: 10vh;
+}
+
+#Pratt1:hover{
+    font-size: 4vw;
+}
+
+#Pratt2:hover{
+    color:white;
+}
+
+#Response1{
+    margin-top: 2vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0;      /* Remove any unnecessary padding */
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.5vw;
+    color:black;
+}
+
+#Response1:hover{
+    font-size: 2vw;
+}
