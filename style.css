@@ -1,243 +1,799 @@
-.text-red {
-    color: red;
-}
-
-.text-white {
-    color: white;
-}
-
-.divider {
-    border: none; /* Remove default border */
-    border-top: solid whitesmoke; /* Set the color and style of the line */
-    width: 400%; /* Make the line take the full width of the container */
-    margin: 1.5vh -5vh; /* Add some margin above and below the line */
-    margin-left: -10vw;
-}
-
-.blackdivider {
-    border: none; /* Remove default border */
-    border-top: solid black; /* Set the color and style of the line */
-    width: 100%; /* Make the line take the full width of the container */
-    margin: 1.5vh -5vh; /* Add some margin above and below the line */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p {
-    font-size: 1vw;
-}
-
-body {
-    background-color: white;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
+    box-sizing: border-box;
 }
 
-#Resume {
-    justify-content: flex-start; /* Align the content to the top */
-    flex-direction: column;
+/* Navbar Styling */
+#NavBar {
     display: flex;
-    background-color: white;
-    border-width: 2vw;
-    border-style: groove;
-    border-color: black;
-    width: 75vw;
-    text-align: center;
-    margin-bottom: -25vh;
-    height: justify;
-    padding-top: 2vw; /* Add some padding at the top for spacing */
-}
-
-#Name {
-    margin-top: 0; /* Remove any default margin */
-    padding-top: 1vw; /* Add some padding if needed */
-    font-family: "Bebas Neue", sans-serif;
-    font-style: normal;
-    font-size: 7vw;
-    font-weight: bold;
-}
-
-#SideBar {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: fit-contents;
-    width: 25vw;
+    background-color: #fbc02d;
+    padding: 1vw 2vw;
+    position: sticky;
     top: 0;
-    left: 0;
-    background-color: #333;
-    padding-top: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 17vh;
 }
 
-#Me {
-    width: 19vw;
-    height: 19vw;
+#Lemonade_Logo {
+    width: 26vh;
+    height: auto;
+}
+
+
+/* Logo*/
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16vh;
+    /* Ensure the width matches the logo size */
+    height: 16vh;
+    /* Ensure the height matches the logo size */
+    background-color: #E6A31E;
     clip-path: circle(50% at 50% 50%);
 }
 
-#LinkBox {
-    margin-top: 2vh;
+#NavBar nav {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-family: "Gaegu", sans-serif;
+    font-size: 4vh;
+}
+
+#NavBar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.8vw 1vw;
+    border-radius: 1vw;
+    background-color: #ffd54f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+#NavBar a:hover {
+    background-color: #f57c00;
+    color: white;
+}
+
+/* Hero Section */
+#Hero {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    background-image: url(LemonadeBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 6vw 2vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Hero h1,
+#Hero p {
+    background-color: rgba(243, 225, 107, 1);
+    /* Light white background */
+    padding: 0.5vw 1vw;
+    /* Add padding to define the highlight area */
+    border-radius: 2vw;
+    /* Curved background */
+    display: inline-block;
+    /* Keep background limited to the text */
+    color: black;
+    /* Change text color for better contrast */
+}
+
+
+.hero-content {
+    max-width: 80vw;
+}
+
+#Hero h1 {
+    margin-top: -25vh;
+    font-size: 5.5vw;
+    margin-bottom: 0.75vh;
+    font-weight: bold;
+    font-family: "Bubblegum Sans", sans-serif;
+    animation: fadeInTitle 2s ease-out;
+}
+
+#Hero p {
+    font-size: 2.5vw;
+    margin-bottom: 7vh;
+    font-family: "Bubblegum Sans", sans-serif;
+    animation: slideUpSubtitle 1.5s ease-out;
+}
+
+#Hero button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 1vh 1vh;
+    font-size: 3vw;
+    font-family: "Eagle Lake", serif;
+    font-style: normal;
+    border-radius: 1vw;
+    cursor: pointer;
+    width: 40vw;
+    height: 12vh;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#Hero button:hover {
+    background-color: #d84315;
+    transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpSubtitle {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Product Grid */
+#product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3vw 2vw;
+    background-color: #fef8e7;
+    gap: 2vw;
+}
+
+#Subscribe {
+    padding-bottom: 0.5vw;
+}
+
+/* Newsletter Subscription */
+#newsletter {
+    background-color: #fff9e6;
+    padding: 2vw;
+    text-align: center;
+}
+
+#newsletter input {
+    width: 20vw;
+    padding: 0.5vw;
+    font-size: 1vw;
+    margin-right: 1vw;
+    border: 0.1vw solid #ffd54f;
+    border-radius: 1vw;
+}
+
+#newsletter button {
+    padding: 0.5vw 1vw;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#newsletter button:hover {
+    background-color: #d84315;
+}
+
+
+/* Footer */
+footer {
+    background-color: #fbc02d;
+    color: white;
+    text-align: center;
+    padding: 1.5vw 0;
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#VideoSection {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center text inside the section */
+    padding: 2vw;
+    /* Add some spacing inside the section */
+}
+
+/* Testimonials Section */
+#Testimonials {
+    background-color: #ffffff;
+    padding: 3vw 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
+    text-align: center;
+    gap: 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow to the section */
 }
 
-#Links {
-    display: flex; /* Horizontally aligns the links */
-    align-items: center;
-    gap: 1vw; /* Adds space between the links and the dash */
+#Testimonials h2 {
+    font-size: 2vw;
+    text-align: center; 
+    color: #f57c00;
+    font-weight: 700;
+    margin-bottom: 1vw;
+    text-transform: uppercase;
+    /* Make the title appear more formal */
 }
 
-a {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
+.testimonial-container {
+    display: flex;
+    gap: 2vw;
+    width: 100%;
+    /* Limit the width for better aesthetics */
+    margin: auto;
+}
+
+.testimonial {
+    font-size: 2vw;
+    width: 25vw;
+    height: 20vh;
+    background-color: #f9f9f9;
+    border:  solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Ensures all boxes have equal width */
+}
+
+.testimonial:hover {
+    transform: translateY(-3vh);
+    /* Lift the card slightly on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Enhance shadow on hover */
+}
+
+.testimonial p {
+    font-size: 1.60vw;
+    color: #555555;
+    margin-top: 5vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.testimonial span {
+    display: block;
+    font-size: 0.9vw;
+    color: #888888;
+    margin-top: 1vw;
+    font-style: italic;
+    text-align: right;
+    /* Align the name to the right */
+}
+
+
+/* Product Card Styling */
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ffd54f;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 2vw);
+    height: 60vh;
+    /* Maintain consistent height */
+    padding: 1vw;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: visible; /* Allow children to extend beyond the bounds */
+    color: white;
+}
+
+/* Dark overlay inside the product card */
+.product-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark overlay color */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Fade in on hover */
+    z-index: 1;
+    /* Ensure it appears behind the text */
+}
+
+.product-card:hover .overlay {
+    opacity: 1;
+    /* Show the dark background on hover */
+}
+
+.product-card:hover {
+    transform: translateY(-2vh);
+}
+
+/* Content inside the card */
+.product-card h2,
+.product-card p,
+.product-card button {
+    position: relative;
+    z-index: 2;
+    /* Ensure they appear above the overlay */
+}
+
+.product-card h2 {
+    font-size: 5vh;
+    /* Increase font size for better visibility */
+    margin: 1vw 0;
+    /* Add space around the title */
+    color: #ffeb3b;
+    /* Lemonade theme color */
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.8);
+    /* Add shadow for better contrast */
+}
+
+.product-card p {
+    margin: 1vw;
+    font-size: 1.5vw;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover p {
+    opacity: 1;
+    /* Show the text on hover */
+}
+
+.product-card button {
+    margin-top: auto;
+    margin-bottom: 2vw;
+    /* Add extra space below for consistency */
+    background-color: #fbc02d;
+    color: white;
+    border: none;
+    padding: 1vw 2vw;
+    /* Make sure the padding is set for proper button size */
+    cursor: pointer;
+    /* Ensures the button is clickable */
+    font-size: 4vh;
+    font-family: "Emilys Candy", serif;
+    /* Adjust font size as needed */
+    border-radius: 1vw;
+    /* Optional, for rounded corners */
+    transition: background-color 0.3s;
+    /* Optional, for hover effect */
+}
+
+.product-card button:hover {
+    background-color: #2E7D32;
+    /* Change on hover */
+}
+
+.product-card .price {
+    position: absolute;
+    top: -9vh; /* Move it upward so it hangs off the card */
+    right: -5vw; /* Move it outward so it overhangs the card edge */
+    font-size: 1.2vw;
+    font-weight: bold;
+    font-family: "Yuji Mai", serif;
+    color: white;
+    padding-top: 7.5vh;
+    background-color: #ff7043; /* Bright orange background */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    text-align: center;
+    z-index: 10;
+    width: 11vw; /* Adjust to fit the clip-path */
+    height: 11vw;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Adds a 3D shadow effect */
+    transform: rotate(30deg); /* Slight rotation to add to the effect */
+}
+
+
+
+#buy-container {
+    background-color: #ffffff;
+    padding: 2vw;
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50vw;
+}
+
+#buy-container h1 {
+    font-size: 2vw;
+    color: #333;
+    margin-bottom: 1vw;
+}
+
+#buy-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+#buy-container input[type="text"],
+#buy-container input[type="email"],
+#buy-container input[type="password"] {
+    width: 100%;
+    padding: 0.75vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1vw;
+}
+
+#buy-container button {
+    background-color: #ffd54f;
+    color: #333;
+    border: none;
+    padding: 0.75vw;
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buy-container button:hover {
+    background-color: #f57c00;
+    color: white;
+}
+
+#confirmation {
+    display: none;
+    margin-top: 1vw;
+    font-size: 1vw;
+    color: #fbc02d;
+}
+
+#back-home {
+    margin-top: 1.5vw;
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
     text-decoration: none;
-    font-size: 2.25vw;
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-a:visited {
+#back-home:hover {
+    background-color: #388e3c;
+}
+
+#thank-you-container {
+    background-color: #ffffff;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#thank-you-container h1 {
+    font-size: 5vw;
+    color: #333;
+    margin-bottom: 1vw;
+}
+
+#thank-you-container p {
+    font-size: 1.5vw;
+    color: #666;
+    margin-bottom: 1.5vw;
+}
+
+#thank-you-container a {
+    display: inline-block;
+    background-color: #fbc02d;
     color: white;
+    text-decoration: none;
+    padding: 0.75vw 1.5vw;
+    font-size: 4vw;
+    font-weight: bold;
+    border-radius: 0.5vw;
+    transition: background-color 0.3s;
 }
 
-a:hover {
-    color: pink;
+#thank-you-container a:hover {
+    background-color: #ffd54f;
 }
 
-a:active {
-    color: pink;
+#AboutUs {
+    background-color: #fef8e7;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 12vh;
+    text-align: center;
+    font-family: "Bubblegum Sans", sans-serif;
 }
 
-#dash {
+#AboutUs .content-container {
+    max-width: 80%;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 1vw;
+    padding: 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#AboutUs h2 {
+    font-size: 3vw;
+    color: #fbc02d;
+    margin-bottom: 1vw;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#AboutUs p {
+    font-size: 1.5vw;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 2vw;
+}
+
+/* Mission Section */
+#Mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(LemonadeBackground1.jpg); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 6vw 2vw;
     color: white;
-    font-size: 1.75vh;
-    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    height: 85vh;
 }
 
-#ContactsBox {
-    margin-top: -3.5vh;
-    text-align: center; /* Center the Contacts text */
-    margin-left: -3.5vh;
-}
-#Contacts{
-    font-size: 2vw;
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    color: lightcyan;
-    
+/* Mission Content Container */
+.Mission-Content {
+    max-width: 60vw;
+    padding: 2vw 3vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInMission 1.5s ease-out;
 }
 
-ul,ol {
-    margin-top: -3vh;
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
+/* Mission Section Title */
+.Mission-Content h1 {
+    font-family: "Delius Swash Caps", cursive;
+    color: black;
+    font-size: 5vw;
     font-weight: bold;
-    font-style: normal;
-    color: whitesmoke;
+    margin-bottom: 1vw;
+}
+
+/* Mission Section Subtitle */
+.Mission-Content p {
+    font-family: "Delius Swash Caps", cursive;
+    color: black;
+    font-size: 1.5vw;
+    line-height: 1.8;
+    margin-bottom: 1.5vw;
+}
+
+/* Styled Button */
+.Mission-Content button {
+    padding: 1vw 2vw;
+    font-size: 10vh;
+    color: white;
+    background-color: #ff7043;
+    border: none;
+    border-radius: 4vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    font-family: "Modak", system-ui;
+}
+
+.Mission-Content button:hover {
+    background-color: #d84315;
+    transform: scale(1.1);
+}
+
+/* About Me Section */
+#AboutMe {
+    padding: 4vw 2vw;
+    background-color: #fef8e7;
+    font-family: 'Arial', sans-serif;
+}
+
+.AboutMe-Container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-radius: 1vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 32vw;
+}
+
+.Profile-Picture {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-ul{
-    font-size: 1.25vw;
+.Profile-Picture img {
+    clip-path: circle(50% at 50% 50%);
+    width: 30vw;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-ol{
-    font-size: 0.8vw;
+.AboutMe-Text h2{
+    padding-bottom: 3vh;
+    color: #fbc02d;
+    font-family: "Bubblegum Sans", sans-serif;
+    font-size: 5vw;
 }
 
-
-
-#Response{
-    margin-top: -10vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    padding: 0;      /* Remove any unnecessary padding */
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
+.AboutMe-Text p{
+    width: 40vw;
     font-size: 1.5vw;
-    color:black;
+    color: #555;
+    font-family: "Sour Gummy", sans-serif;
 }
 
-#References{    
-    margin-top: 10vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    padding: 0;      /* Remove any unnecessary padding */
+.AboutMe-Text {
+    padding: 2vw;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50vw;
+}
+
+/* Animations */
+@keyframes fadeInMission {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .AboutMe-Container {
+        flex-direction: column;
+    }
+
+    .AboutMe-Text,
+    .Profile-Picture {
+        flex: 1 1 auto;
+    }
+
+    .Profile-Picture img {
+        max-width: 150px;
+    }
+}
+
+  
+.container {
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+  
+  /* Contact Information Section */
+  .contact-info,
+  .contact-form {
+    flex: 1 1 400px;
+    padding: 2vw;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h2 {
+    font-size: 6vh;
     font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 2.5vw;
-    color:black;}
+  }
 
-#Response:hover{
-    font-size: 2vw;
-}
+  .contact-info ul {
+    list-style: none;
+    padding: 1vw 0;
+  }
+  
+  .contact-info p {
+    margin: 0.5vw 0;
+    font-size: 3vh;
+    font-family: "DM Serif Text", serif;
+  }
 
-#Doi, #Doi2{
+  .contact-info p1 {
+    margin: 0.5vw 0;
+    font-size: 5vh;
+    font-family: "DM Serif Text", serif;
+  }
+  
+  /* Form Section */
+  .contact-form h2 {
+    font-size: 5vh;
     font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.25vw;  
-    color:black;
-}
+  }
 
-#Doi1{    
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.25vw;  
-    color:black;
-    margin-top: 10vh}
-
-#Doi1:hover{
-    font-size: 4vw;
-}
-
-#Doi2:hover{
-    color:white;
-}
-
-#Pratt, #Pratt2{
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.25vw;
-    color:black;
-}
-
-#Pratt1{
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.25vw;
-    color:black;
-    margin-top: 10vh;
-}
-
-#Pratt1:hover{
-    font-size: 4vw;
-}
-
-#Pratt2:hover{
-    color:white;
-}
-
-#Response1{
-    margin-top: 2vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    padding: 0;      /* Remove any unnecessary padding */
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.5vw;
-    color:black;
-}
-
-#Response1:hover{
-    font-size: 2vw;
-}
+  /* Form Section */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin: 0.5vw 0 0.3vw;
+    font-size: 14px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8vw;
+    margin-bottom: 1vw;
+    border: 2px solid #ffa726;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .contact-form button {
+    background-color: #ffb300;
+    color: white;
+    padding: 0.8vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "DM Serif Text", serif;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ffca28;
+  }

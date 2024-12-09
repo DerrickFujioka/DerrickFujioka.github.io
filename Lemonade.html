@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemonade Stand</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Eagle+Lake&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="NavBar">
+        <a href="index.html" id="logo">
+            <img src="logo.png" id="Lemonade_Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="Lemonade.html">Products</a>
+            <a href="Contacts.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Product Grid using Flexbox -->
+    <div id="product-grid">
+        <div class="product-card" style="background-image: url('Classic_Lemonad.jpg');">
+            <div class="overlay"></div>
+            <span class="price">$4.99</span>
+            <h2>Classic Lemonade</h2>
+            <p>Refresh your taste buds with the timeless, zesty delight of our Classic Lemonade. Made with freshly
+                squeezed lemons and just the right touch of sweetness, it’s the perfect thirst-quencher for any day.</p>
+            <button id="Buy_Now" onclick="location.href='Buy.html'">Buy Now</button>
+        </div>
+        <div class="product-card" style="background-image: url('Pink_Lemonade.jpg');">
+            <div class="overlay"></div>
+            <span class="price">$4.99</span>
+            <h2>Pink Lemonade</h2>
+            <p>Add a splash of fun to your day with our vibrant Pink Lemonade. Crafted with the same refreshing lemons
+                as our classic version but with a hint of fruity flair, this drink is as beautiful as it is delicious.
+            </p>
+            <button id="Buy_Now" onclick="location.href='Buy.html'">Buy Now</button>
+        </div>
+        <div class="product-card" style="background-image: url('Cucumber_Lemonade.jpeg');">
+            <div class="overlay"></div>
+            <span class="price">$4.99</span>
+            <h2>Cucumber Lemonade</h2>
+            <p>Cool and invigorating, our Cucumber Lemonade combines the crisp freshness of cucumbers with the citrus
+                zing of lemons. It’s the ultimate refresher to revitalize your senses.</p>
+            <button id="Buy_Now" onclick="location.href='Buy.html'">Buy Now</button>
+        </div>
+        <div class="product-card" style="background-image: url('Peach_Lemonade.jpg');">
+            <div class="overlay"></div>
+            <span class="price">$4.99</span>
+            <h2>Peach Lemonade</h2>
+            <p>Savor the sweet, juicy flavor of peaches blended with the tangy punch of lemons in our Peach Lemonade.
+                It’s a delightful twist on a classic favorite.</p>
+            <button id="Buy_Now" onclick="location.href='Buy.html'">Buy Now</button>
+        </div>
+        <div class="product-card" style="background-image: url('Blueberry_Lemonade.jpg');">
+            <div class="overlay"></div>
+            <span class="price">$4.99</span>
+            <h2>Blueberry Lemonade</h2>
+            <p>Bursting with the rich, tangy sweetness of fresh blueberries, our Blueberry Lemonade is a flavor-packed
+                adventure in every glass.</p>
+            <button id="Buy_Now" onclick="location.href='Buy.html'">Buy Now</button>
+        </div>
+        <div class="product-card" style="background-image: url('Watermelon_Lemonade.jpg');">
+            <div class="overlay"></div>
+            <span class="price">$4.99</span>
+            <h2>Watermelon Lemonade</h2>
+            <p>Dive into summer with our Watermelon Lemonade, a luscious blend of juicy watermelon and zesty lemons.
+                This drink is a crowd-pleaser.</p>
+            <button id="Buy_Now" onclick="location.href='Buy.html'">Buy Now</button>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lemonade Stand. All rights reserved. <a href="">Privacy Policy</a></p>
+    </footer>
+</body>
+
+</html>
