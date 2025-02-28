@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemonade Stand</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Eagle+Lake&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="NavBar">
+        <a href="index.html" id="logo">
+            <img src="logo.png" id="Lemonade_Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="Lemonade.html">Products</a>
+            <a href="Contacts.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="Hero">
+        <h1>Welcome to the World's Purest Lemonade</h1>
+        <p>"Refreshing your thirst, one sip at a time!"</p>
+        <button onclick="location.href='Lemonade.html'">Explore Our Menu</button>
+    </div>
+
+    <!-- Video Section -->
+    <div id="VideoSection" class="flex-center">
+        <h2>See the Joy of Refreshing Lemonade</h2>
+        <p>Please watch our customers enjoy every sip of ourlemonade!</p>
+        <video controls style="width: 85%; margin: 1rem auto; border-radius: 10px;">
+            <source src="DrinkingLemonade.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div id="Testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"The best lemonade I've ever tasted!" - Sydney Ozaki</p>
+            </div>
+            <div class="testimonial">
+                <p>"Refreshing and perfectly sweet." - Joel Kim</p>
+            </div>
+            <div class="testimonial">
+                <p>"A summer favorite for my family!" - Mr. Kam</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div id="newsletter">
+        <h2>Stay Updated!</h2>
+        <p id="Subscribe">Subscribe to our newsletter for updates and special offers.</p>
+        <form>
+            <input type="text" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lemonade Stand. All rights reserved. <a href="">Privacy Policy</a></p>
+    </footer>
+</body>
+
+</html>
